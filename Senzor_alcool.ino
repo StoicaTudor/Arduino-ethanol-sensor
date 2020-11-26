@@ -19,7 +19,7 @@ float avgVal = 0;
 int dt = 100;
 int dt2 = 500;
 int dt3 = 300;
-int dt4 = 2000;
+int dt4 = 1000;
 
 void setup() {
   // put your setup code here, to run once:
