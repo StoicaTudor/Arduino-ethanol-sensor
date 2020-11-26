@@ -11,7 +11,7 @@ char server[] = "192.168.2.183";
 IPAddress ip(192,168,0,177); 
 EthernetClient client; 
 
-const int btnPin = 8;
+const int btnPin = 2;
 const int AOUT = A0;
 int btnNew, btnOld, state;
 float ethVal, sensorValOld, sensorValNew, voltage;
@@ -19,7 +19,7 @@ float avgVal = 0;
 int dt = 100;
 int dt2 = 500;
 int dt3 = 300;
-int dt4 = 30000;
+int dt4 = 2000;
 
 void setup() {
   // put your setup code here, to run once:
@@ -29,7 +29,6 @@ void setup() {
   lcd.begin();
   lcd.backlight();
   Serial.begin(9600);
-  
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");
     Ethernet.begin(mac, ip);
@@ -93,7 +92,7 @@ void loop() {
     lcd.print(avgVal);
     lcd.print(" V");
     sendToDB();
-    delay(dt4);  /// not to overcrowd the DB - 30s
+    delay(dt4);  
   }
     delay(dt);
 }
