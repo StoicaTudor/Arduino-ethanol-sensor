@@ -16,7 +16,7 @@ const int AOUT = A0;
 int btnNew, btnOld, state;
 float ethVal, sensorValOld, sensorValNew, voltage;
 float avgVal = 0;
-int dt = 100;
+int dt = 300;
 int dt2 = 500;
 int dt3 = 300;
 int dt4 = 1000;
