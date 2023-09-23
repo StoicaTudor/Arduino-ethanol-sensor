@@ -6,6 +6,8 @@ class mq3{
   $this->storeInDB($value);
  }
 
+// aici ar putea sa fie optimizat, daca iti stergi contul de github
+ 
  function connect(){              // url and user of the database, no password
   $this->link = mysqli_connect('localhost','root','') or die('Cannot connect to the DB');
   mysqli_select_db($this->link,'alcohol') or die('Cannot select the DB');
